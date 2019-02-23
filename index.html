@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+  </head>
+  <body>
+    <div id="box">
+      <form>
+        <div>
+          <input type="text" name="todo" placeholder="What todo" autocomplete="false" />
+          <input type="text" name="time" placeholder="When todo" />
+        </div>
+        <button type="submit">Add to list</button>
+      </form>
+
+      <div id='output'>
+          <ul></ul>
+      </div>
+
+    </div>
+
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCHzhAXtGx6Ik3CrhYMrbQIy92aIh7ajgQ",
+        authDomain: "vanillatodo.firebaseapp.com",
+        databaseURL: "https://vanillatodo.firebaseio.com",
+        projectId: "vanillatodo",
+        storageBucket: "vanillatodo.appspot.com",
+        messagingSenderId: "819027228570"
+      };
+      firebase.initializeApp(config);
+      var db = firebase.firestore()
+    //   db.settings({timestampsInSnapshots: true})
+    </script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
